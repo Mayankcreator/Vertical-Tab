@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #dad3f8;
+}
+.container{
+    max-width: 950px;
+    width: 100%;
+    border-radius: 12px;
+    background: #fff;
+    padding: 40px 50px 40px 40px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.container .content{
+    display: flex;
+    /* gap: 60px; */
+
+}
+.container .title{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.container .content .list{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    flex-grow: 1;
+}
+.content .list label{
+    height: 60px;
+    padding-left: 25px;
+    border-radius: 12px;
+    line-height: 60px;
+    font-size: 22px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #333;
+    z-index: 10;
+}
+label i{
+    margin-right: 5px;
+}
+.content .indicator{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background: #6d50e2;
+    border-radius: 12px;
+    transition: all ease 0.3s;
+}
+.content input{
+    display: none;
+}
+#home:checked ~ .list .indicator{
+    top: 0;
+}
+#blog:checked ~ .list .indicator{
+    top: 60px;
+}
+#help:checked ~ .list .indicator{
+    top: 120px;
+}
+#code:checked ~ .list .indicator{
+    top: 180px;
+}
+#about:checked ~ .list .indicator{
+    top: 240px;
+}
+#home:checked ~ .list .home{
+    color: #fff;
+}
+#blog:checked ~ .list .blog{
+    color: #fff;
+}
+#help:checked ~ .list .help{
+    color: #fff;
+}
+#code:checked ~ .list .code{
+    color: #fff;
+}
+#about:checked ~ .list .about{
+    color: #fff;
+}
+.content .text{
+    width: 70%;
+    margin-left: 60px;
+    margin-top: 10px;
+    display: none;
+}
+.content .text .second-title{
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+#home:checked ~ .Home{
+    display: flex;
+    flex-direction: column;
+    
+}
+#blog:checked ~ .Blog{
+    display: flex;
+    flex-direction: column;
+}
+#help:checked ~ .Help{
+    display: flex;
+    flex-direction: column;
+}
+#code:checked ~ .Code{
+    display: flex;
+    flex-direction: column;
+}
+#about:checked ~ .About{
+    display: flex;
+    flex-direction: column;
+}
+@media(max-width:768px){
+    .content .text{
+        /* margin-left: 20px; */
+    }
+}
